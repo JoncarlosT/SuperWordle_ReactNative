@@ -1,13 +1,18 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
+import { ThemeProvider } from "styled-components";
+import AppTheme from "./theme";
 import StackView from "./src/StackView";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <StackView />
-    </NavigationContainer>
+    <ThemeProvider theme={AppTheme}>
+      <NavigationContainer>
+        <StackView />
+        <StatusBar style="auto" />
+      </NavigationContainer>
+    </ThemeProvider>
   );
 }
 

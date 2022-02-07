@@ -1,25 +1,15 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { IntroScreenView, HowToText, NavigationButton } from "./styles";
 
 export default function IntroScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      <Text>This is IntoScreen!</Text>
+    <IntroScreenView>
+      <HowToText>This is IntoScreen!</HowToText>
       <StatusBar style="auto" />
-
-      <Button
+      <NavigationButton
         title="Go to TabNavigation"
         onPress={() => navigation.navigate("TabNavigation")}
       />
-    </View>
+    </IntroScreenView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
