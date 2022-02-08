@@ -14,6 +14,7 @@ export default function IntroScreen({ navigation }) {
   return (
     <IntroScreenView>
       <StatusBar style="auto" />
+
       <HeaderDescription>
         <HowToText>How To Play</HowToText>
         <HowToText>Guess the WORDLE in 6 tries.</HowToText>
@@ -30,10 +31,6 @@ export default function IntroScreen({ navigation }) {
         title="Go to TabNavigation"
         onPress={() => navigation.navigate("TabNavigation")}
       />
-      <NavigationButton
-        title="Change theme"
-        onPress={() => themeResources.changeTheme()}
-      ></NavigationButton>
     </IntroScreenView>
   );
 }

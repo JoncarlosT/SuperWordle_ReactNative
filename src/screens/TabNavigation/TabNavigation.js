@@ -5,7 +5,6 @@ export default function TabNavigation({ navigation }) {
   return (
     <View style={styles.container}>
       <Text>This Is TabNavigation</Text>
-      <StatusBar style="auto" />
 
       <Button
         title="Go to IntroScreen"

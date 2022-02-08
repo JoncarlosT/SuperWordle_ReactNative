@@ -7,7 +7,6 @@ export default function App() {
     <ThemeSelectsContextProvider>
       <NavigationContainer>
         <StackView />
-        <StatusBar style="auto" />
       </NavigationContainer>
     </ThemeSelectsContextProvider>
   );

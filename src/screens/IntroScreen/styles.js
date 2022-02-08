@@ -10,6 +10,8 @@ export const IntroScreenView = styled.View`
 
 export const HeaderDescription = styled.View``;
 
-export const HowToText = styled.Text``;
+export const HowToText = styled.Text`
+  color: ${(props) => props.theme.fontColor};
+`;
 
 export const NavigationButton = styled(Button).attrs({})``;
