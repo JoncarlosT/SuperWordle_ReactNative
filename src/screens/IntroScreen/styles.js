@@ -11,6 +11,7 @@ export const IntroScreenView = styled.View`
 export const HeaderDescription = styled.View``;
 
 export const HowToText = styled.Text`
+  font-size: ${(props) => props.theme.fontSize.medium};
   color: ${(props) => props.theme.fontColor};
 `;
 
