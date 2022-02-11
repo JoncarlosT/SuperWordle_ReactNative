@@ -4,6 +4,7 @@ import { useContext } from "react";
 import ThemeSelectsContext from "../../theme";
 import IntroScreen from "../screens/IntroScreen";
 import TabNavigation from "../screens/TabNavigation";
+import GameScreen from "../screens/GameScreen/GameScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,11 @@ export default function StackView() {
         <Stack.Screen
           name="IntroScreen"
           component={IntroScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="GameScreen"
+          component={GameScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

@@ -10,6 +10,10 @@ export default function TabNavigation({ navigation }) {
         title="Go to IntroScreen"
         onPress={() => navigation.navigate("IntroScreen")}
       />
+      <Button
+        title="Go to GameScreen"
+        onPress={() => navigation.navigate("GameScreen")}
+      />
     </View>
   );
 }

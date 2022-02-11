@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { StatusBar } from "expo-status-bar";
 import ThemeSelectsContext from "../../../theme";
 import { Dimensions } from "react-native";
 import {
@@ -17,13 +16,12 @@ import {
 export default function IntroScreen({ navigation }) {
   const themeResources = useContext(ThemeSelectsContext);
   const screenHeight = Dimensions.get("window").height;
-  const screenWidth = Dimensions.get("window").width - 20;
+  const screenWidth = Dimensions.get("window").width - 20 + "px";
 
   return (
-    <IntroScreenView height={screenHeight + "px"}>
-      <StatusBar style="auto" />
+    <IntroScreenView height={screenHeight}>
       <HowToTextHeader>How To Play</HowToTextHeader>
-      <DescriptionView width={screenWidth + "px"}>
+      <DescriptionView width={screenWidth}>
         <HowToText>
           Guess the <BoldSpan>WORDLE</BoldSpan> in 6 tries.
         </HowToText>
