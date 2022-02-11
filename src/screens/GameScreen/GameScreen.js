@@ -1,10 +1,17 @@
-import { Text } from "react-native";
-import { GameScreenStyled } from "./styles";
+import { Text, Button } from "react-native";
+import { GameScreenStyled, IntroScreenNavButton, HeaderView } from "./styles";
 
-export default function GameScreen() {
+export default function GameScreen({ navigation }) {
   return (
     <GameScreenStyled>
-      <Text>Wordle</Text>
+      <HeaderView>
+        <Text>Wordle</Text>
+        <IntroScreenNavButton
+          name="question"
+          type="octicon"
+          onPress={() => navigation.navigate("IntroScreen")}
+        />
+      </HeaderView>
     </GameScreenStyled>
   );
 }

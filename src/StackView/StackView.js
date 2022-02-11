@@ -15,13 +15,13 @@ export default function StackView() {
     <ThemeProvider theme={themeResources.themeMode}>
       <Stack.Navigator>
         <Stack.Screen
-          name="IntroScreen"
-          component={IntroScreen}
+          name="GameScreen"
+          component={GameScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="GameScreen"
-          component={GameScreen}
+          name="IntroScreen"
+          component={IntroScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen

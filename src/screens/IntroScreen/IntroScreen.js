@@ -78,8 +78,8 @@ export default function IntroScreen({ navigation }) {
         </HowToText>
       </ExampleView>
       <NavigationButton
-        title="Go to TabNavigation"
-        onPress={() => navigation.navigate("TabNavigation")}
+        title="Go to GameScreen"
+        onPress={() => navigation.navigate("GameScreen")}
       />
     </IntroScreenView>
   );
