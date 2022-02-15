@@ -20,7 +20,7 @@ export default function GameScreen({ navigation }) {
         <IntroScreenNavButton
           name="question"
           type="octicon"
-          onPress={() => navigation.navigate("IntroScreen")}
+          onPress={() => navigation.navigate("HowToPlayScreen")}
         />
       </HeaderView>
       <WordleGameView width={screenWidth}>
@@ -67,6 +67,8 @@ export default function GameScreen({ navigation }) {
           <WordleLetter>J</WordleLetter>
         </WordleLetterView>
       </WordleGameView>
+
+      <Button title="Back" onPress={() => navigation.navigate("IntroScreen")} />
     </GameScreenStyled>
   );
 }

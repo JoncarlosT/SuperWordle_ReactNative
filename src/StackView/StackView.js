@@ -3,8 +3,8 @@ import { ThemeProvider } from "styled-components";
 import { useContext } from "react";
 import ThemeSelectsContext from "../../theme";
 import IntroScreen from "../screens/IntroScreen";
-import TabNavigation from "../screens/TabNavigation";
 import GameScreen from "../screens/GameScreen/GameScreen";
+import HowToPlayScreen from "../screens/HowToPlayScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,18 +15,14 @@ export default function StackView() {
     <ThemeProvider theme={themeResources.themeMode}>
       <Stack.Navigator>
         <Stack.Screen
-          name="GameScreen"
-          component={GameScreen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
           name="IntroScreen"
           component={IntroScreen}
           options={{ headerShown: false }}
         />
+        <Stack.Screen name="HowToPlayScreen" component={HowToPlayScreen} />
         <Stack.Screen
-          name="TabNavigation"
-          component={TabNavigation}
+          name="GameScreen"
+          component={GameScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
