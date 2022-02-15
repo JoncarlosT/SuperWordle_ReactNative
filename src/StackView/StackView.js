@@ -19,7 +19,11 @@ export default function StackView() {
           component={IntroScreen}
           options={{ headerShown: false }}
         />
-        <Stack.Screen name="HowToPlayScreen" component={HowToPlayScreen} />
+        <Stack.Screen
+          name="HowToPlayScreen"
+          options={{ headerTitle: "How To Play" }}
+          component={HowToPlayScreen}
+        />
         <Stack.Screen
           name="GameScreen"
           component={GameScreen}

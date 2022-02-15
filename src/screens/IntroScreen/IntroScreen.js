@@ -1,19 +1,21 @@
 import { useContext } from "react";
-import { Button } from "react-native";
 import ThemeSelectsContext from "../../../theme";
-import { IntroScreenView } from "./styles";
+import { IntroScreenView, ButtonStyled } from "./styles";
 
 export default function IntroScreen({ navigation }) {
   const themeResources = useContext(ThemeSelectsContext);
 
   return (
     <IntroScreenView>
-      <Button title="Game" onPress={() => navigation.navigate("GameScreen")} />
-      <Button
+      <ButtonStyled
+        title="Game"
+        onPress={() => navigation.navigate("GameScreen")}
+      />
+      <ButtonStyled
         title="How To Play"
         onPress={() => navigation.navigate("HowToPlayScreen")}
       />
-      <Button title="theme" onPress={themeResources.changeTheme} />
+      <ButtonStyled title="theme" onPress={themeResources.changeTheme} />
     </IntroScreenView>
   );
 }

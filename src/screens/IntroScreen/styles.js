@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import { Button } from "react-native-elements";
 
 export const IntroScreenView = styled.View`
   flex: 1;
@@ -6,3 +7,5 @@ export const IntroScreenView = styled.View`
   align-items: center;
   justify-content: center;
 `;
+
+export const ButtonStyled = styled(Button)``;

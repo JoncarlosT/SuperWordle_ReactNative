@@ -18,7 +18,7 @@ export const HeaderView = styled.View`
 `;
 
 export const WordleGameView = styled.View`
-  width: ${(props) => props.width};
+  width: ${(props) => props.width + "px"};
 `;
 
 export const WordleLetterView = styled.View`
