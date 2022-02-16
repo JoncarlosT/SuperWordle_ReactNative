@@ -1,4 +1,5 @@
 import { useState } from "react";
+import OnScreenKeyboard from "../../components/OnScreenKeyboard";
 import { Text, Button } from "react-native";
 import { Dimensions } from "react-native";
 import {
@@ -36,6 +37,24 @@ export default function GameScreen({ navigation }) {
     words[wordRow][wordCol] = letter;
   };
 
+  const setKeyBoardInput = (key) => {
+    console.log("wordRow");
+    console.log(wordRow);
+    console.log("wordCol");
+    console.log(wordCol);
+
+    if (key === "ENTER") {
+      if (wordRow >= 6) {
+      }
+    } else if (key === "←") {
+      if (wordCol >= 0) {
+      }
+    } else {
+      if (wordCol <= 4) {
+      }
+    }
+  };
+
   return (
     <GameScreenStyled>
       <HeaderView>
@@ -49,6 +68,8 @@ export default function GameScreen({ navigation }) {
       <WordleGameView width={adjustedScreenWidth}>
         {renderWords(words)}
       </WordleGameView>
+
+      <OnScreenKeyboard setKeyBoardInput={setKeyBoardInput} />
 
       <Button title="Back" onPress={() => navigation.navigate("IntroScreen")} />
     </GameScreenStyled>
