@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import OnScreenKeyboard from "../../components/OnScreenKeyboard";
 import { Text, Button } from "react-native";
 import { Dimensions } from "react-native";
@@ -33,24 +33,30 @@ export default function GameScreen({ navigation }) {
     });
   };
 
-  const fillInRow = (letter) => {
+  useEffect(() => {
+    console.log(words[wordRow]);
+    if (wordCol === -1) setWordCol(0);
+    if (wordCol === 5) setWordCol(4);
+    console.log(wordCol);
+    renderWords(words);
+  }, [wordRow, wordCol]);
+
+  const fillInLetter = (letter) => {
     words[wordRow][wordCol] = letter;
   };
 
   const setKeyBoardInput = (key) => {
-    console.log("wordRow");
-    console.log(wordRow);
-    console.log("wordCol");
-    console.log(wordCol);
-
     if (key === "ENTER") {
-      if (wordRow >= 6) {
-      }
     } else if (key === "←") {
       if (wordCol >= 0) {
+        fillInLetter(" ");
+        setWordCol(wordCol - 1);
       }
     } else {
-      if (wordCol <= 4) {
+      if (wordCol < 5) {
+        fillInLetter(key);
+        setWordCol(1 + wordCol);
+        // wordCol === 4 ? setWordCol(5) : setWordCol(1 + wordCol);
       }
     }
   };
