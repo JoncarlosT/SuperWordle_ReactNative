@@ -34,10 +34,8 @@ export default function GameScreen({ navigation }) {
   };
 
   useEffect(() => {
-    console.log(words[wordRow]);
     if (wordCol === -1) setWordCol(0);
     if (wordCol === 5) setWordCol(4);
-    console.log(wordCol);
     renderWords(words);
   }, [wordRow, wordCol]);
 
