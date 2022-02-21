@@ -34,8 +34,6 @@ export default function GameScreen({ navigation }) {
   };
 
   useEffect(() => {
-    if (wordCol === -1) setWordCol(0);
-    if (wordCol === 5) setWordCol(4);
     renderWords(words);
   }, [wordRow, wordCol]);
 
@@ -46,17 +44,17 @@ export default function GameScreen({ navigation }) {
   const setKeyBoardInput = (key) => {
     if (key === "ENTER") {
     } else if (key === "←") {
-      if (wordCol >= 0) {
-        fillInLetter(" ");
-        setWordCol(wordCol - 1);
-      }
+      if (wordCol === 5) words[wordRow].pop();
+      fillInLetter(" ");
+      setWordCol(wordCol - 1);
     } else {
-      if (wordCol < 5) {
+      if (wordCol <= 4) {
         fillInLetter(key);
-        setWordCol(1 + wordCol);
-        // wordCol === 4 ? setWordCol(5) : setWordCol(1 + wordCol);
+        setWordCol(wordCol + 1);
       }
     }
+
+    console.log(words[wordRow]);
   };
 
   return (
